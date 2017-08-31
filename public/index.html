@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FoxyNinja IoT Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">
+    <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
+
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 65px;
+            background-color: #D9D9D9;
+        }
+        
+        #editor {
+            position: absolute;
+            height: 700px;
+            width: 700px;
+            align-content: center;
+        }
+        
+        .nav-pills>li>a {
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            color: white;
+        }
+        
+        .nav-pills>li>a:hover {
+            color: black;
+        }
+        
+        .nav-pills>li.pill-danger>a {
+            background-color: rgb(225, 172, 77);
+            /*            background-color: #d9534f;*/
+            color: black;
+        }
+        
+        .nav-pills>li.pill-danger>a:hover {
+            /*            background-color: #000000;*/
+            background-color: #d9534f;
+            color: white;
+        }
+        /*
+        .nav-tabs>li>a {
+            background-color: #FGCF00 !important;
+            color: black;
+        }
+*/
+        
+        .nav-tabs>li>a {
+            background-color: #333333;
+            border-color: #777777;
+            color: #fff;
+        }
+        /* active tab color */
+        
+        .nav-tabs>li.active>a,
+        .nav-tabs>li.active>a:hover,
+        .nav-tabs>li.active>a:focus {
+            color: #fff;
+            background-color: #666;
+            border: 1px solid #888888;
+        }
+        
+        .space-wrapper {
+            height: 150px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-fixed-top">
+        <ul class="nav nav-pills nav-justified" role="tablist">
+            <li class="btn-primary"><a href="#">Download</a></li>
+            <li class="btn-primary"><a href="#">Save as Version</a></li>
+            <li class="btn-primary"><a href="#">Compile</a></li>
+            <li class="pill-danger"><a href="#">Upload</a></li>
+        </ul>
+    </nav>
+
+    <div class="space-wrapper">
+
+    </div>
+
+    <div class="container">
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+            <li class="active"><a href="#" data-toggle="tab">Global</a></li>
+            <li><a href="#" data-toggle="tab">Setup</a></li>
+            <li><a href="#" data-toggle="tab">Loop</a></li>
+        </ul>
+    </div>
+
+    <div class="container-fluid">
+        <div class="editor-wrapper">
+            <div id="editor">function foo(items) { var x = "All this is syntax highlighted"; return x; }
+            </div>
+
+            <script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+            <script>
+                var editor = ace.edit("editor");
+                editor.setTheme("ace/theme/cobalt");
+                editor.getSession().setUseWrapMode(true);
+                editor.getSession().setMode("ace/mode/javascript");
+                editor.resize();
+
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
