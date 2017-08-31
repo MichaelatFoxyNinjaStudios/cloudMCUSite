@@ -14,14 +14,20 @@
     <style type="text/css" media="screen">
         body {
             padding-top: 65px;
-            background-color: #D9D9D9;
+            background-color: #ffffff;
         }
         
         #editor {
-            position: absolute;
+            position:relative;
+            right: -40%;
+            top: 0%;
             height: 700px;
-            width: 700px;
+            width: 1000px;
             align-content: center;
+        }
+        
+        .editor-wrapper {
+            background-color: gray;
         }
         
         .nav-pills>li>a {
@@ -34,41 +40,48 @@
             color: white;
         }
         
-        .nav-pills>li>a:hover {
+        .nav-pills>li>a:hover,
+        .nav-pills>li>a:active,
+        .nav-pills>li>a:focus {
+            background-color: #4fd95f;
             color: black;
         }
         
         .nav-pills>li.pill-danger>a {
-            background-color: rgb(225, 172, 77);
+            background-color: #d9994f;
             /*            background-color: #d9534f;*/
             color: black;
         }
         
-        .nav-pills>li.pill-danger>a:hover {
+        .nav-pills>li.pill-danger>a:hover,
+        .nav-pills>li.pill-danger>a:active,
+        .nav-pills>li.pill-danger>a:focus {
             /*            background-color: #000000;*/
             background-color: #d9534f;
             color: white;
         }
-        /*
+
         .nav-tabs>li>a {
-            background-color: #FGCF00 !important;
+            background-color: #4e78b6;
+            border: 1px solid black; 
             color: black;
-        }
-*/
-        
-        .nav-tabs>li>a {
-            background-color: #333333;
-            border-color: #777777;
-            color: #fff;
         }
         /* active tab color */
         
         .nav-tabs>li.active>a,
         .nav-tabs>li.active>a:hover,
         .nav-tabs>li.active>a:focus {
-            color: #fff;
-            background-color: #666;
-            border: 1px solid #888888;
+            color: black;
+            background-color: #4fd95f;
+/*            border: 1px solid #888888;*/
+        }
+        
+        .nav-tabs>li>a:active,
+        .nav-tabs>li>a:hover,
+        .nav-tabs>li>a:focus {
+            color: black;
+            background-color: #4fd95f;
+            
         }
         
         .space-wrapper {
@@ -83,10 +96,10 @@
 
     <nav class="navbar navbar-fixed-top">
         <ul class="nav nav-pills nav-justified" role="tablist">
-            <li class="btn-primary"><a href="#">Download</a></li>
-            <li class="btn-primary"><a href="#">Save as Version</a></li>
-            <li class="btn-primary"><a href="#">Compile</a></li>
-            <li class="pill-danger"><a href="#">Upload</a></li>
+            <li class="btn-primary"><a href="#test1">Download</a></li>
+            <li class="btn-primary"><a href="#test2">Save as Version</a></li>
+            <li class="btn-primary"><a href="#test3">Compile</a></li>
+            <li class="pill-danger"><a href="#test4">Upload</a></li>
         </ul>
     </nav>
 
@@ -96,9 +109,9 @@
 
     <div class="container">
         <ul class="nav nav-tabs nav-justified" role="tablist">
-            <li class="active"><a href="#" data-toggle="tab">Global</a></li>
-            <li><a href="#" data-toggle="tab">Setup</a></li>
-            <li><a href="#" data-toggle="tab">Loop</a></li>
+            <li class="active"><a href="#test1" data-toggle="tab">Global</a></li>
+            <li><a href="#turd" data-toggle="tab">Setup</a></li>
+            <li><a href="#test1" data-toggle="tab">Loop</a></li>
         </ul>
     </div>
 
